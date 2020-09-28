@@ -10,7 +10,7 @@ Calendario stores all the events in a standard ics file.
 Because of the huge specs of this format, only the necessary fields will be used:
 - Summary
 - Location
-- Destription
+- Description
 - Dtstart (starting date and time)
 - Dtend (ending date and time).
 
