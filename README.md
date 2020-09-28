@@ -14,4 +14,13 @@ Because of the huge specs of this format, only the necessary fields will be used
 - Dtstart (starting date and time)
 - Dtend (ending date and time).
 
+The button bar from left:
+- choose a month (click on the name to go to today)
+- choose a year (click on the year to to to today)
+- add a new appointment
+- save the calendar
+- exit the program.
+
+Date limitation: if an event is longer than one day, it will appear only in the day it starts.
+
 ![My image](https://github.com/frank038/Calendario/blob/master/image.png)
