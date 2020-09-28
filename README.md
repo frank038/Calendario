@@ -21,6 +21,8 @@ The button bar from left:
 - save the calendar
 - exit the program.
 
+Moreover, each event can be modified or deleted by clicking on the event in the right with the right button of the mouse.
+
 Calendario tends to be a quite complite program in its semplicity.
 
 Date limitation: if an event is longer than one day, it will appear only in the day it starts.
