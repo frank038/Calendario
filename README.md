@@ -6,6 +6,8 @@ MD5SUM calendario.py_20200928.tar.gz: 6374639721d4740051d53ad6882c0d07
 
 This program is free to use and modify for everyone.
 
+Required: python3, gtk3.
+
 Calendario stores all the events in a standard ics file.
 Because of the huge specs of this format, only the necessary fields will be used:
 - Summary
