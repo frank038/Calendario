@@ -21,6 +21,8 @@ The button bar from left:
 - save the calendar
 - exit the program.
 
+Calendario tends to be a quite complite program in its semplicity.
+
 Date limitation: if an event is longer than one day, it will appear only in the day it starts.
 
 ![My image](https://github.com/frank038/Calendario/blob/master/image.png)
