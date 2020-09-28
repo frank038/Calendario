@@ -29,4 +29,6 @@ Calendario tends to be a quite complite program in its semplicity.
 
 Date limitation: if an event is longer than one day, it will appear only in the day it starts.
 
+Personalizations: in the top of the file some settings can be changed.
+
 ![My image](https://github.com/frank038/Calendario/blob/master/image.png)
