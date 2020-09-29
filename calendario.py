@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# V. 1.1
+# V. 1.2
 ############# PERSONALIZATION #############
 # size of the main window
 WWIDTH=1100
@@ -755,9 +755,14 @@ CALSCALE:GREGORIAN\n""")
         summary=self.modev.SUMMARY
         location=self.modev.LOCATION
         description=self.modev.DESCRIPTION
-        sdate=self.modev.DTSTART
+        sdateT,stimeT=self.modev.DTSTART.split("T")
+        smonth = TMONTSH[int(sdateT[4:6])-1]
+        sdate="{} {} {} at {}:{}".format(sdateT[0:4],smonth,sdateT[6:8],stimeT[0:2],stimeT[2:4])
+        edateT,etimeT=self.modev.DTEND.split("T")
+        emonth = TMONTSH[int(edateT[4:6])-1]
+        edate="{} {} {} at {}:{}".format(edateT[0:4],emonth,edateT[6:8],etimeT[0:2],etimeT[2:4])
         
-        dialog = DialogYN(self, " Delete? ", "\n Summary: {}\n Location: {}\n Description: {}\n Date: {} \n".format(summary,location,description,sdate))
+        dialog = DialogYN(self, " Delete? ", "\n Summary: {}\n Location: {}\n Description: {}\n Start: {} \n End: {} \n".format(summary,location,description.replace("\\n", "\n"),sdate,edate))
         response = dialog.run()
 
         if response == Gtk.ResponseType.OK:
