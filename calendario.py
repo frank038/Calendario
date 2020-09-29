@@ -949,7 +949,7 @@ class viewEventClass(Gtk.Dialog):
         box.add(ldescription)
         self.description = Gtk.TextView()
         buffer = self.description.get_buffer()
-        buffer.set_text(str(self.data.DESCRIPTION.replace("\\n","\n")))))
+        buffer.set_text(str(self.data.DESCRIPTION.replace("\\n","\n")))
         box.add(self.description)
         
         # box for date and time
