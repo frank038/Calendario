@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# V. 1.0
+# V. 1.1
 ############# PERSONALIZATION #############
 # size of the main window
 WWIDTH=1100
@@ -686,7 +686,7 @@ CALSCALE:GREGORIAN\n""")
                 temp_etime_h = etime[0:2]
                 temp_etime_m = etime[2:4]
                 etime2 = "{}:{}".format(temp_etime_h, temp_etime_m)
-                elabel.set_tooltip_markup("<i>Summary:</i> {}\n<i>Location:</i> {}\n<i>Description:</i> {}\n<i>Start:</i> {} at {}\n<i>End:</i> {} at {}".format(SUMMARY, ell.LOCATION, ell.DESCRIPTION, sdate2, stime2, edate2, etime2))
+                elabel.set_tooltip_markup("<i>Summary:</i> {}\n<i>Location:</i> {}\n<i>Description:</i> {}\n<i>Start:</i> {} at {}\n<i>End:</i> {} at {}".format(SUMMARY, ell.LOCATION, ell.DESCRIPTION.replace("\\n","\n"), sdate2, stime2, edate2, etime2))
                 # link the whole event to the label
                 elabel.evnt = ell
                 elabel.set_has_window(True)
@@ -949,7 +949,7 @@ class viewEventClass(Gtk.Dialog):
         box.add(ldescription)
         self.description = Gtk.TextView()
         buffer = self.description.get_buffer()
-        buffer.set_text(str(self.data.DESCRIPTION))
+        buffer.set_text(str(self.data.DESCRIPTION.replace("\\n","\n")))))
         box.add(self.description)
         
         # box for date and time
@@ -1092,7 +1092,7 @@ class modifyEventClass(Gtk.Dialog):
         box.add(ldescription)
         self.description = Gtk.TextView()
         buffer = self.description.get_buffer()
-        buffer.set_text(str(self.data.DESCRIPTION))
+        buffer.set_text(str(self.data.DESCRIPTION.replace("\\n","\n")))
         box.add(self.description)
         
         # box for date and time
@@ -1200,7 +1200,7 @@ class modifyEventClass(Gtk.Dialog):
         # description
         buffer = self.description.get_buffer()
         startIter, endIter = buffer.get_bounds()    
-        text = buffer.get_text(startIter, endIter, False) 
+        text = buffer.get_text(startIter, endIter, False).replace("\n","\\n")
         self.value.append(text)
         # calendar date - start
         lstext = "{}{:02d}{:02d}".format(self.scalendar.get_date().year, self.scalendar.get_date().month+1, self.scalendar.get_date().day)
@@ -1402,7 +1402,7 @@ class addEvent(Gtk.Dialog):
         # description
         buffer = self.description.get_buffer()
         startIter, endIter = buffer.get_bounds()    
-        text = buffer.get_text(startIter, endIter, False) 
+        text = buffer.get_text(startIter, endIter, False).replace("\n","\\n")
         self.value.append(text)
         # calendar date - start
         lstext = "{}{:02d}{:02d}".format(self.scalendar.get_date().year, self.scalendar.get_date().month+1, self.scalendar.get_date().day)
