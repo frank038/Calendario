@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# V. 1.2
+# V. 1.3
 ############# PERSONALIZATION #############
 # size of the main window
 WWIDTH=1100
@@ -380,12 +380,8 @@ CALSCALE:GREGORIAN\n""")
         self.on_date(new_date)
         
         # set the date in the top label in the right
-        if (self.opening_data.year == self.NUM_YEAR) and (self.opening_data.month == self.NUM_MONTH):
-            ttext = "<span size='xx-large'>{}</span>\n<span size='large'>{} {}, {}</span>".format(self.NAME_TODAY.title(), self.NAME_TOMONTH.title(), self.NUM_TODAY, self.NUM_YEAR)
-            self.on_tlabel(ttext)
-        else:
-            ttext = "<span size='xx-large'>{}</span>\n<span size='large'>{} {}, {}</span>".format(self.NAME_TODAY.title(), self.NAME_TOMONTH.title(), self.opening_data.day, self.opening_data.year)
-            self.on_tlabel(ttext)
+        ttext = "<span size='xx-large'>{}</span>\n<span size='large'>{} {}, {}</span>".format(self.NAME_TODAY.title(), self.NAME_TOMONTH.title(), self.NUM_TODAY, self.NUM_YEAR)
+        self.on_tlabel(ttext)
         
         # delete the appointment widgets of the box in the right
         swwidgets = self.swbox.get_children()
