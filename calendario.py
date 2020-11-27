@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# V. 1.3
+# V. 1.4
 ############# PERSONALIZATION #############
 # size of the main window
 WWIDTH=1100
@@ -569,6 +569,7 @@ CALSCALE:GREGORIAN\n""")
                 LABEL_CONTENT += "Total: {}".format(num_ev)+"\n"
         #
         alabel.set_markup(LABEL_CONTENT[:-1])
+        alabel.set_halign(Gtk.Align.START)
         fframe.add(alabel)
         ####### end appointments
         return fframe
