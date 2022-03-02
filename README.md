@@ -1,6 +1,6 @@
 # Calendario
 A simply program in which to store appointments.
-Version 1.5
+Version 1.6
 
 MD5SUM calendario.py_20201217.tar.gz: 80407524f2c5ccb79e3179c8482ac981
 
