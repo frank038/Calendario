@@ -25,7 +25,9 @@ The button bar from left:
 
 Moreover, each event can be modified or deleted by clicking on the event in the right with the right button of the mouse.
 
-Calendario tends to be a quite complite program in its semplicity.
+This program accept the data as argument in the form yyyymmdd, e.g. 20220302, and the calendar opens selecting that date. 
+
+Calendario tends to be a quite complete program in its semplicity.
 
 Date limitation: if an event is longer than one day, it will appear only in the day it starts.
 
